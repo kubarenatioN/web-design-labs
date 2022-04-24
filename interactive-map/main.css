@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+p {
+    margin: 0;
+}
+
+.bg-video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, .7);
+}
+
+#app {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    height: 80%;
+    width: 80%;
+    z-index: 10;
+}
+
+.map-wrapper {
+    max-width: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+#map {
+    position: relative;
+}
+
+.region-wrapper {
+    max-width: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#region {
+    position: relative;
+}
+
+#map-svg {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+#map-svg > path {
+    fill: transparent;
+    stroke-width: .5px;
+    stroke: #ccc;
+}
+
+#map-svg path.noticable {
+    fill: rgba(247, 208, 164, 0.308);
+    transition: .2s;
+}
+
+#map-svg path.noticable.checked,
+#map-svg path.noticable.active {
+    fill: rgba(252, 178, 94, 0.5);
+}
+
+.map-marker {
+    position: absolute;
+    width: 36px;
+    cursor: pointer;
+    transform: translate(-50%, 0);
+    transform-origin: center bottom;
+    transition: .2s;
+}
+
+.map-marker.checked,
+.map-marker.active {
+    transform: translate(-50%, 0) scale(1.5);
+}
+
+.marker-bg {
+    fill: rgb(255, 153, 57);
+}
+
+.marker-circle {
+    fill: #333;
+}
+
+.region-title {
+    font-size: 32px;
+    margin: 20px 0 10px;
+}
+
+.region-paragraph {
+    padding: 10px 0;
+}
+
+.region-svg {
+    position: absolute;
+}
+
+.region-header {
+    font-size: 48px;
+    color: #fff;
+}
+
+
+.tooltip-wrapper {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: .6s;
+    z-index: 2;
+    transform: translate(100px, 0);
+}
+
+.tooltip-wrapper.active {
+    transform: translate(0, 0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.tooltip-wrapper img {
+    height: 300px;
+    border-radius: 10px;
+}
+
+.tooltip-wrapper p {
+    font-size: 18px;
+}

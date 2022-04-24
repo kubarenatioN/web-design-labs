@@ -1,0 +1,36 @@
+@keyframes fly {
+	50% {
+		transform: translate(0, -60px);
+	}
+}
+.about{
+	&-inner {
+		display: flex;
+		min-height: calc(100vh - 60px);
+		align-items: center;
+		justify-content: space-between;
+	}
+	&-main {
+		max-width: percentage(0.4);
+		margin-top: -100px;
+	}
+	&-title {
+		font-size: 42px;
+	}
+	&-cta {
+		margin-top: 50px;
+	}
+	&-figure {
+		max-width: percentage(0.55);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&-img {
+		width: percentage(1);
+		animation-name: fly;
+		animation-duration: 6s;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+	}
+}

@@ -1,0 +1,74 @@
+@import 'mixins.less';
+@import 'vars.less';
+
+.pricing{
+	&-header {
+		text-align: center;
+	}
+	&-title {
+		font-size: 36px;
+	}
+	&-paragraph {
+		max-width: 500px;
+		margin: 0 auto;
+		padding-top: 30px;
+		font-size: 16px;
+	}
+	&-table {
+		padding-top: 60px;
+		display: flex;
+		justify-content: center;
+	}
+	&__item {
+		max-width: 300px;
+		padding: 20px 40px 30px;
+		background-color: @item-bg;
+		border-radius: 10px;
+		margin: 0 30px;
+	}
+	&-table-main {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	&-table-header {
+		text-align: center;
+		padding: 10px 0;
+	}
+	&-table-price {
+		font-size: 24px;
+	}
+	&-table-price-amount {
+		font-size: 36px;
+		font-weight: 600;
+	}
+	&-table-features-title {
+		padding: 10px 0;
+		font-size: 20px;
+		text-align: center;
+		.bordered(@accent-active);
+	}
+	&-table-features {
+		padding: 10px 0;
+		& li {
+			padding: 10px 0;
+			padding-left: 24px;
+			position: relative;
+			.bordered(@bg);
+			&::before {
+				content: '';
+				position: absolute;
+				width: 12px;
+				height: 12px;
+				left: 0;
+				top: 14px;
+				background-color: @accent-active;
+				transform: rotate(45deg);
+			}
+		}
+	}
+	&__item .btn {
+		align-self: center;
+		margin-top: auto;
+	}
+}

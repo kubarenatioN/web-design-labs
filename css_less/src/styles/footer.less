@@ -1,0 +1,38 @@
+.footer{
+	margin-top: 100px;
+	background-color: @item-bg;
+	&-inner {
+		display: flex;
+		justify-content: space-between;
+		padding: 40px 0;
+	}
+	&-logo-image {
+		width: 40px;
+	}
+	&-links__contacts {
+		display: flex;
+		& li {
+			margin-left: 20px;
+			font-size: 22px;
+			&:hover {
+				color: @accent-active;
+			}
+		}
+	}
+	&-links__social {
+		margin-top: 20px;
+		display: flex;
+		justify-content: flex-end;
+		& li {
+			margin-left: 20px;
+			font-size: 16px;
+			&:hover {
+				color: @accent-active;
+			}
+		}
+	}
+	&-copyright {
+		font-size: 14px;
+		margin-top: 20px;
+	}
+}

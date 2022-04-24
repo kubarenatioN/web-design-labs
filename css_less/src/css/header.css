@@ -1,0 +1,18 @@
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: inline-block;
+  width: 60px;
+}
+.logo-image {
+  width: 100%;
+}
+.nav-list {
+  display: flex;
+}
+.contacts__list {
+  display: flex;
+}
