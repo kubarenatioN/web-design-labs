@@ -68,18 +68,35 @@
 		h3 {
 			margin: 0;
 		}
+		#chart-wrapper {
+			width: 600px;
+			margin-left: 40px;
+		}
+		.container2 {
+			display: flex;
+		}
 	</style>
 	<h1>Backbone JS. Task Manager.</h1>
 
-	<div id="root">
+	<div class="container2">
+		<div class="container">
 
+			<div id="root">
+
+			</div>
+			
+			<form id="add-task">
+				<input type="text" name="title" placeholder="Задание">
+				<button>Create</button>
+			</form>
+		</div>
+
+		<div id="chart-wrapper">
+			<canvas id="chart"></canvas>
+		</div>
 	</div>
-	
-	<form id="add-task">
-		<input type="text" name="title" placeholder="Задание">
-		<button>Create</button>
-	</form>
 
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="js/jquery-3.6.0.min.js"></script>
 	<script src="js/underscore-umd.js"></script>
 	<script src="js/backbone.js"></script>
